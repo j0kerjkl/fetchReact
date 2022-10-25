@@ -8,6 +8,7 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import FaceIcon from '@mui/icons-material/Face';
 import HouseIcon from '@mui/icons-material/House';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'; 
+import "./components/App.css";
 
 const App=()=> {
 
