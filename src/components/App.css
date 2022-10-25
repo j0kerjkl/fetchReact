@@ -13,6 +13,9 @@ h5{
 .button-container-div {
   text-align: center;
 }
+.select-container-div{
+  text-align: center;
+}
 .bookCards{
   background-color: #975418;
   margin: 20px;
@@ -62,8 +65,14 @@ h5{
 
 .flexContainer{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
 }
+.column{
+  flex: 33.33%
+}
+
 @keyframes spinner {
   0% {
     transform: rotate(0deg);
@@ -86,4 +95,19 @@ h5{
   margin-left: auto;
   margin-right: auto;
   width: 10em;
+}
+
+.dropdown{
+  box-shadow: 0 0 0 1px;
+
+  color: #1b1c1d!important;
+  background: transparent none!important;
+  font-weight: 400;
+  border-radius:50.28571429rem;
+  text-transform: none;
+  text-align: center;
+  text-shadow: none!important;
+  font-size: 1rem;
+  padding: 0.7857142899999996em 0.5em 0.7857142899999996em;
+  margin: 0 .25em 0 0;
 }
