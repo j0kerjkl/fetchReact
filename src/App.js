@@ -2,13 +2,8 @@ import React from "react";
 import  Axios  from "axios";
 import { useState } from "react";
 import LoadingSpinner from "./components/LoadingSpinner";
-import GOT from './components/GOT.jpg'
-import BookIcon from '@mui/icons-material/Book';
-import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
-import FaceIcon from '@mui/icons-material/Face';
-import HouseIcon from '@mui/icons-material/House';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'; 
 import "./components/App.css";
+import CardsForData from "./components/CardsForData";
 
 const App=()=> {
 
@@ -20,6 +15,7 @@ const App=()=> {
         setIsLoading(true);
         Axios.get("https://www.anapioficeandfire.com/api/books?pageSize=30")
         .then((res)=>{
+          console.log(res.data)
             setBooks(res.data)
             setIsLoading(false);
         });
@@ -43,7 +39,7 @@ const App=()=> {
       <h1>Game of Thrones Books</h1>
       <h5>Fetch a list from an API and Display it!</h5>
       <div className="button-container-div">
-        <button onClick={getBooks} disabled={isLoading} className="ui secondary basic button">Fetch Data</button>
+        <button onClick={getBooks} disabled={isLoading} className="ui inverted button">Fetch Data</button>
         <select onChange={handlech} className="dropdown">
             <option value="">Select Sorting Method</option>
             <option value="ASC" className="ui secondary basic button">New to Old</option>
@@ -57,22 +53,11 @@ const App=()=> {
       books.map((book ,i)=>{
         return (
           <div className="column" key={i}>
-          <div className="flip-card">
-            <div className="flip-card-inner">
-              <div className="flip-card-front">
-                <img src={GOT} alt="Avatar" style={{width:"300px",height:"300px"}} />
-              </div>
-              <div className="flip-card-back" key={i}>
-                <h1 >Book {i+1}</h1> 
-                <h2 className="bookname" key={book}>{book.name} &nbsp; <BookIcon/></h2>
-                    <p> {book.authors}  &nbsp;{<FaceIcon/>}</p>
-                    <p>{book.numberOfPages} &nbsp;{<LibraryBooksIcon/>}</p>
-                    <p>{book.country} &nbsp; {<HouseIcon/>}</p>
-                    <p>{new Date(book.released).toDateString()} &nbsp; {<CalendarMonthIcon/>}</p>
-              </div>
-            </div>
+            <CardsForData 
+            book={book}
+            i={i}
+             />
           </div>
-        </div>       
               )
           })
         } 
