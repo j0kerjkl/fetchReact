@@ -50,13 +50,10 @@ const App=()=> {
     <div className='flexContainer' >
     {
       books &&
-      books.map((book ,i)=>{
+      books?.map((book ,i)=>{
         return (
           <div className="column" key={i}>
-            <CardsForData 
-            book={book}
-            i={i}
-             />
+            <CardsForData book={book} i={i} />
           </div>
               )
           })

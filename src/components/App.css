@@ -1,4 +1,4 @@
-body{
+body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -8,13 +8,13 @@ body{
   justify-content: center;
   align-items: center;
 }
-h1{
+h1 {
   text-align: center;
   padding-top: 10px;
   color: #fff;
 }
 
-h5{
+h5 {
   color: #fff;
   text-align: center;
 }
@@ -22,13 +22,12 @@ h5{
 .button-container-div {
   text-align: center;
 }
-.select-container-div{
+.select-container-div {
   text-align: center;
 }
-.bookCards{
+.bookCards {
   background-color: #975418;
   margin: 20px;
-
 }
 .loading-spinner {
   width: 50px;
@@ -40,25 +39,24 @@ h5{
   padding: 50px;
 }
 
-.center{
+.center {
   margin-left: auto;
   margin-right: auto;
   width: 10em;
 }
 
-.dropdown{
-  
-  box-shadow: 0 0 0 2px #fff inset!important;
-    background: transparent none;
-    color: #fff;
-    text-shadow: none!important;
+.dropdown {
+  box-shadow: 0 0 0 2px #fff inset !important;
+  background: transparent none;
+  color: #fff;
+  text-shadow: none !important;
 
   font-weight: 400;
-  border-radius:50.28571429rem;
+  border-radius: 50.28571429rem;
   text-transform: none;
   text-align: center;
-  text-shadow: none!important;
+  text-shadow: none !important;
   font-size: 1rem;
   padding: 0.7857142899999996em 0.5em 0.7857142899999996em;
-  margin: 0 .25em 0 0;
+  margin: 0 0.25em 0 0;
 }
